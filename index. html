@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>মাহমুদুরের ম্যাজিক ওয়েবসাইট</title>
+    <style>
+        /* এটি লাইট মোড (স্বাভাবিক অবস্থা) */
+        body {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: #333;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background 0.5s ease, color 0.5s ease;
+            padding: 20px;
+        }
+
+        /* এটি ডার্ক মোডের জন্য নতুন স্টাইল */
+        body.dark-mode {
+            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+            color: #ffffff;
+        }
+        
+        body.dark-mode h3 {
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body id="myBody">
+
+    <h1>ম্যাজিক ওয়েবসাইট! ✨</h1>
+    
+    <button onclick="toggleDarkMode()" style="background-color: #333; color: white; padding: 8px 15px; border: none; border-radius: 20px; cursor: pointer;">ডার্ক মোড অন/অফ</button>
+    
+    <br><br>
+
+    <p>আপনার নাম লিখুন:</p>
+    <input type="text" id="userName" placeholder="এখানে নাম লিখুন..." style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;">
+    
+    <br><br>
+    
+    <button onclick="greetUser()" style="background-color: dodgerblue; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">জাদু দেখুন</button>
+
+    <br><br>
+    <h2 id="greetingMessage" style="color: green;"></h2>
+
+    <hr style="border: 1px dashed #999; margin: 30px 0;">
+
+    <h3>নতুন ফিচার: miuzic প্লেয়ার 🎵</h3>
+    <p>নিচের প্লে বাটনে চাপ দিয়ে গান শুনুন:</p>
+    <audio controls style="margin-bottom: 20px;">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+    
+    <h3>নতুন ফিচার: ভিডিও প্লেয়ার 🎬</h3>
+    <p>নিচের প্লে বাটনে চাপ দিয়ে ভিডিওটি দেখুন:</p>
+    <video controls width="90%" style="border-radius: 10px; max-width: 400px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-beautiful-green-forest-from-above-44357-large.mp4" type="video/mp4">
+    </video>
+
+    <hr style="border: 1px dashed #999; margin: 30px 0;">
+
+    <h3>আমার প্রিয় ওয়েবসাইটের তালিকা</h3>
+    <p>গুগল সার্চ করতে <a href="https://www.google.com" target="_blank" style="color: blue; font-weight: bold; text-decoration: underline;">গুগল সার্চ করুন</a></p>
+    
+    <br>
+    <p>কোডিং শেখার জন্য আমার পছন্দের ৩টি প্ল্যাটফর্ম:</p>
+
+    <ol style="display: inline-block; text-align: left;">
+        <li>W3Schools (সহজ থিওরি শেখার জন্য)</li>
+        <li>YouTube (ভিডিও টিউটোরিয়াল দেখার জন্য)</li>
+        <li>Sololearn (মোবাইলে কুইজ খেলার জন্য)</li>
+    </ol>
+
+    <script>
+        // এবার ডার্ক মোডের কোড একদম সহজ ও আধুনিক
+        function toggleDarkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+        function greetUser() {
+            var name = document.getElementById("userName").value;
+            if(name === "") {
+                document.getElementById("greetingMessage").innerText = "অনুগ্রহ করে আগে একটি নাম লিখুন! 😊";
+            } else {
+                document.getElementById("greetingMessage").innerText = "স্বাগতম, " + name + "! আপনি একজন দারুণ কোডার হয়ে উঠছেন। 🚀";
+            }
+        }
+    </script>
+
+</body>
+</html>
